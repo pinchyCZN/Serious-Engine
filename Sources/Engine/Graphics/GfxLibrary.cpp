@@ -303,7 +303,9 @@ extern INDEX sys_bUsingDirect3D = 0;
 // these are commented because they are already defined in winuser.h
 //#define LLKHF_EXTENDED 0x00000001
 //#define LLKHF_INJECTED 0x00000010
-//#define LLKHF_ALTDOWN  0x00000020
+#ifndef LLKHF_ALTDOWN
+	#define LLKHF_ALTDOWN  0x00000020
+#endif
 //#define LLKHF_UP       0x00000080
 
 //#define LLMHF_INJECTED 0x00000001
@@ -312,13 +314,13 @@ extern INDEX sys_bUsingDirect3D = 0;
  * Structure used by WH_KEYBOARD_LL
  */
 // this is commented because there's a variant for this struct in winuser.h
-/*typedef struct tagKBDLLHOOKSTRUCT {
+typedef struct tagKBDLLHOOKSTRUCT {
     DWORD   vkCode;
     DWORD   scanCode;
     DWORD   flags;
     DWORD   time;
     DWORD   dwExtraInfo;
-} KBDLLHOOKSTRUCT, FAR *LPKBDLLHOOKSTRUCT, *PKBDLLHOOKSTRUCT;*/
+} KBDLLHOOKSTRUCT, FAR *LPKBDLLHOOKSTRUCT, *PKBDLLHOOKSTRUCT;
 
 static HHOOK _hLLKeyHook = NULL;
 
