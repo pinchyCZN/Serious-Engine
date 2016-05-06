@@ -323,24 +323,152 @@
 						<Tool
 							Name="VCCustomBuildTool"
 							CommandLine="echo $(SolutionDir)..\bin\ecc.exe&#x0D;&#x0A;cd $(SolutionDir)&#x0D;&#x0A;&quot;$(SolutionDir)..\bin\ecc.exe&quot; Engine/Classes/$(InputFileName)&#x0D;&#x0A;"
-							Outputs="Classes/%(Filename).cpp;%(Outputs)"
+							Outputs="$(InputDir)/$(InputName).cpp"
 						/>
 					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Classes\MovableBrushEntity.es"
 					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo $(SolutionDir)..\bin\ecc.exe&#x0D;&#x0A;cd $(SolutionDir)&#x0D;&#x0A;&quot;$(SolutionDir)..\bin\ecc.exe&quot; Engine/Classes/$(InputFileName)&#x0D;&#x0A;"
+							Outputs="$(InputDir)/$(InputName).cpp"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Classes\MovableEntity.es"
 					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo $(SolutionDir)..\bin\ecc.exe&#x0D;&#x0A;cd $(SolutionDir)&#x0D;&#x0A;&quot;$(SolutionDir)..\bin\ecc.exe&quot; Engine/Classes/$(InputFileName)&#x0D;&#x0A;"
+							Outputs="$(InputDir)/$(InputName).cpp"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Classes\MovableModelEntity.es"
 					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo $(SolutionDir)..\bin\ecc.exe&#x0D;&#x0A;cd $(SolutionDir)&#x0D;&#x0A;&quot;$(SolutionDir)..\bin\ecc.exe&quot; Engine/Classes/$(InputFileName)&#x0D;&#x0A;"
+							Outputs="$(InputDir)/$(InputName).cpp"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Classes\PlayerEntity.es"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo $(SolutionDir)..\bin\ecc.exe&#x0D;&#x0A;cd $(SolutionDir)&#x0D;&#x0A;&quot;$(SolutionDir)..\bin\ecc.exe&quot; Engine/Classes/$(InputFileName)&#x0D;&#x0A;"
+							Outputs="$(InputDir)/$(InputName).cpp"
+						/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+			<Filter
+				Name="brushes"
+				>
+				<File
+					RelativePath=".\Brushes\Brush.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Brushes\BrushArchive.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Brushes\BrushExport.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Brushes\BrushImport.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Brushes\BrushIO.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Brushes\BrushMip.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Brushes\BrushPolygon.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Brushes\BrushSector.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Brushes\BrushShadows.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Brushes\BrushTriangularize.cpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Entities"
+				>
+				<File
+					RelativePath=".\Entities\Entity.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Entities\EntityClass.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Entities\EntityCollision.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Entities\EntityCopying.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Entities\EntityProperties.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Entities\FieldBSPTesting.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Entities\LastPositions.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Entities\NearestPolygon.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Entities\PlayerCharacter.cpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="gameagent"
+				>
+				<File
+					RelativePath=".\GameAgent\GameAgent.cpp"
 					>
 				</File>
 			</Filter>
