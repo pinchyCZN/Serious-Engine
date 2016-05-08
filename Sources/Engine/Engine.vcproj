@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;C:\DEV\MSVC_Projects\Serious-Engine\Sources\Engine\Sound&quot;;&quot;C:\DEV\MSVC_Projects\Serious-Engine\Sources&quot;;&quot;C:\DEV\MSVC_Projects\Serious-Engine\Sources\Engine\Base&quot;;&quot;C:\DEV\MSVC_Projects\Serious-Engine\Sources\Engine&quot;"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)Base&quot;;&quot;$(ProjectDir)Sound&quot;;&quot;$(ProjectDir)..\&quot;;&quot;$(ProjectDir)&quot;;&quot;$(SolutionDir)&quot;;&quot;$(SolutionDir)libvorbis\include&quot;;&quot;$(SolutionDir)libogg\include&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -183,7 +183,7 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="echo intdir-$(IntDir)&#x0D;&#x0A;echo outdir=$(OutDir)&#x0D;&#x0A;echo inputdir=$(InputDir)&#x0D;&#x0A;echo (InputPath)=$(InputPath)&#x0D;&#x0A;echo (InputName)=$(InputName)&#x0D;&#x0A;echo (InputFileName)=$(InputFileName)&#x0D;&#x0A;echo (InputExt)=$(InputExt)&#x0D;&#x0A;&#x0D;&#x0A;"
+						CommandLine="echo intdir-$(IntDir) &gt;$(InputDir)paths.txt&#x0D;&#x0A;echo outdir=$(OutDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo inputdir=$(InputDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputPath)=$(InputPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputName)=$(InputName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputFileName)=$(InputFileName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputExt)=$(InputExt) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (ProjectDir)=$(ProjectDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (ProjectPath)=$(ProjectPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (SolutionDir)=$(SolutionDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (SolutionPath)=$(SolutionPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetDir)=$(TargetDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetPath)=$(TargetPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetName)=$(TargetName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetFileName)=$(TargetFileName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;"
 						Outputs="$(InputDir)/$(InputName).cpp"
 					/>
 				</FileConfiguration>
@@ -265,6 +265,19 @@
 					>
 				</File>
 				<File
+					RelativePath=".\Base\Parser.y"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison cmdline=$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;popd&#x0D;&#x0A;cd&#x0D;&#x0A;echo move /Y $(InputDir)Parser.c Parser.cpp&#x0D;&#x0A;move /Y $(InputDir)Parser.c Parser.cpp"
+							Outputs="$(ProjectName)/Base/Parser.cpp"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
 					RelativePath=".\Base\Profiling.cpp"
 					>
 				</File>
@@ -295,6 +308,15 @@
 				<File
 					RelativePath=".\Base\Shell.cpp"
 					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="2"
+							PrecompiledHeaderThrough="StdH.h"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Base\ShellTypes.cpp"
@@ -337,6 +359,10 @@
 				Name="classes"
 				>
 				<File
+					RelativePath=".\Classes\BaseEvents.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\Classes\BaseEvents.es"
 					>
 					<FileConfiguration
@@ -348,6 +374,10 @@
 							Outputs="$(InputDir)/$(InputName).cpp"
 						/>
 					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Classes\MovableBrushEntity.cpp"
+					>
 				</File>
 				<File
 					RelativePath=".\Classes\MovableBrushEntity.es"
@@ -363,6 +393,10 @@
 					</FileConfiguration>
 				</File>
 				<File
+					RelativePath=".\Classes\MovableEntity.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\Classes\MovableEntity.es"
 					>
 					<FileConfiguration
@@ -376,6 +410,10 @@
 					</FileConfiguration>
 				</File>
 				<File
+					RelativePath=".\Classes\MovableModelEntity.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\Classes\MovableModelEntity.es"
 					>
 					<FileConfiguration
@@ -387,6 +425,10 @@
 							Outputs="$(InputDir)/$(InputName).cpp"
 						/>
 					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Classes\PlayerEntity.cpp"
+					>
 				</File>
 				<File
 					RelativePath=".\Classes\PlayerEntity.es"
@@ -772,15 +814,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\Network\CPacket.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\Network\Diff.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Network\EntityHashing.cpp"
 					>
 				</File>
 				<File
@@ -816,6 +850,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\Rendering\RenderProfile.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\Network\Server.cpp"
 					>
 				</File>
@@ -828,39 +866,7 @@
 				Name="rendering"
 				>
 				<File
-					RelativePath=".\Rendering\RenCache.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Rendering\RendASER.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Rendering\RendClip.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\Rendering\Render.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Rendering\RenderAdding.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Rendering\RenderBrushes.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Rendering\RenderModels.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Rendering\RenderProfile.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Rendering\RendMisc.cpp"
 					>
 				</File>
 				<File
@@ -936,35 +942,7 @@
 				Name="templates"
 				>
 				<File
-					RelativePath=".\Templates\AllocationArray.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\Templates\BSP.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Templates\DynamicArray.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Templates\DynamicContainer.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Templates\DynamicStackArray.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Templates\HashTableTemplate.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Templates\LinearAllocator.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Templates\NameTable.cpp"
 					>
 				</File>
 				<File
@@ -973,22 +951,6 @@
 				</File>
 				<File
 					RelativePath=".\Templates\NameTable_CTranslationPair.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Templates\Selection.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Templates\StaticArray.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Templates\StaticStackArray.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Templates\Stock.cpp"
 					>
 				</File>
 				<File
