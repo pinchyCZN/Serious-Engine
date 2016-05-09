@@ -61,6 +61,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="Dbghelp.lib"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -272,7 +273,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison cmdline=$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;popd&#x0D;&#x0A;cd&#x0D;&#x0A;echo copy /Y $(InputDir)Parser.c Parser.cpp&#x0D;&#x0A;copy /Y $(InputDir)Parser.c Parser.cpp&#x0D;&#x0A;del /q $(InputDir)Parser.c"
+							CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison cmdline=$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;popd&#x0D;&#x0A;cd&#x0D;&#x0A;echo copy /Y $(InputDir)Parser.c $(InputDir)Parser.cpp&#x0D;&#x0A;copy /Y $(InputDir)Parser.c $(InputDir)Parser.cpp&#x0D;&#x0A;del /q $(InputDir)Parser.c&#x0D;&#x0A;"
 							Outputs="$(InputDir)$(InputName).cpp"
 						/>
 					</FileConfiguration>
@@ -300,6 +301,23 @@
 				<File
 					RelativePath=".\Base\ReplaceFile.cpp"
 					>
+				</File>
+				<File
+					RelativePath=".\Base\scanner.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Base\Scanner.l"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo scanner arg=$(SolutionDir)..\Tools.win32\flex -o$(InputDir)Scanner.cpp -S$(ProjectDir)Base\Flex.skl $(InputPath)&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\flex -o$(InputDir)Scanner.cpp -S$(ProjectDir)Base\Flex.skl $(InputPath)"
+							Outputs=" $(InputDir)Scanner.cpp"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Base\Serial.cpp"
@@ -900,6 +918,54 @@
 				<File
 					RelativePath=".\Ska\Skeleton.cpp"
 					>
+				</File>
+				<File
+					RelativePath=".\Ska\smcPars.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Ska\smcPars.y"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison args=$(SolutionDir)..\Tools.Win32\bison -d -psyy -o $(ProjectName)/Ska/smcPars.c $(ProjectName)/Ska/smcPars.y&#x0D;&#x0A;$(SolutionDir)..\Tools.Win32\bison -d -psyy -o $(ProjectName)/Ska/smcPars.c $(ProjectName)/Ska/smcPars.y&#x0D;&#x0A;popd&#x0D;&#x0A;copy /Y $(InputDir)smcPars.c $(InputDir)smcPars.cpp&#x0D;&#x0A;del /Q $(InputDir)smcPars.c"
+							Outputs="$(inputdir)$(inputname).cpp"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Ska\smcScan.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\Ska\smcScan.l"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo scanner arg=$(SolutionDir)..\Tools.win32\flex -o$(InputDir)smcScan.cpp -S$(ProjectDir)ska\smcFlex.skl $(InputPath)&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\flex -o$(InputDir)smcScan.cpp -S$(ProjectDir)Base\Flex.skl $(InputPath)&#x0D;&#x0A;"
+							Outputs="$(inputdir)$(inputname).cpp"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Ska\StringTable.cpp"
