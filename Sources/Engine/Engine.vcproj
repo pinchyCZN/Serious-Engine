@@ -44,7 +44,7 @@
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
+				RuntimeLibrary="1"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
@@ -63,6 +63,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="Dbghelp.lib"
 				LinkIncremental="2"
+				IgnoreDefaultLibraryNames="LIBCMTD.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
@@ -314,7 +315,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="echo scanner arg=$(SolutionDir)..\Tools.win32\flex -o$(InputDir)Scanner.cpp -S$(ProjectDir)Base\Flex.skl $(InputPath)&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\flex -o$(InputDir)Scanner.cpp -S$(ProjectDir)Base\Flex.skl $(InputPath)"
+							CommandLine="echo scanner arg=$(SolutionDir)..\Tools.win32\flex -o$(InputDir)Scanner.cpp -S$(ProjectDir)Base\Flex.skl $(InputPath)&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\flex -o$(InputDir)Scanner.cpp -S$(ProjectDir)Base\Flex.skl $(InputPath)&#x0D;&#x0A;"
 							Outputs=" $(InputDir)Scanner.cpp"
 						/>
 					</FileConfiguration>
@@ -922,13 +923,6 @@
 				<File
 					RelativePath=".\Ska\smcPars.cpp"
 					>
-					<FileConfiguration
-						Name="Debug|Win32"
-						>
-						<Tool
-							Name="VCCLCompilerTool"
-						/>
-					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Ska\smcPars.y"
@@ -938,7 +932,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison args=$(SolutionDir)..\Tools.Win32\bison -d -psyy -o $(ProjectName)/Ska/smcPars.c $(ProjectName)/Ska/smcPars.y&#x0D;&#x0A;$(SolutionDir)..\Tools.Win32\bison -d -psyy -o $(ProjectName)/Ska/smcPars.c $(ProjectName)/Ska/smcPars.y&#x0D;&#x0A;popd&#x0D;&#x0A;copy /Y $(InputDir)smcPars.c $(InputDir)smcPars.cpp&#x0D;&#x0A;del /Q $(InputDir)smcPars.c"
+							CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison args=$(SolutionDir)..\Tools.Win32\bison -d -psyy -o $(ProjectName)/Ska/smcPars.c $(ProjectName)/Ska/smcPars.y&#x0D;&#x0A;$(SolutionDir)..\Tools.Win32\bison -d -psyy -o $(ProjectName)/Ska/smcPars.c $(ProjectName)/Ska/smcPars.y&#x0D;&#x0A;popd&#x0D;&#x0A;copy /Y $(InputDir)smcPars.c $(InputDir)smcPars.cpp&#x0D;&#x0A;del /Q $(InputDir)smcPars.c&#x0D;&#x0A;"
 							Outputs="$(inputdir)$(inputname).cpp"
 						/>
 					</FileConfiguration>
@@ -946,13 +940,6 @@
 				<File
 					RelativePath=".\Ska\smcScan.cpp"
 					>
-					<FileConfiguration
-						Name="Debug|Win32"
-						>
-						<Tool
-							Name="VCCLCompilerTool"
-						/>
-					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Ska\smcScan.l"
