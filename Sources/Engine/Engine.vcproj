@@ -272,8 +272,8 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison cmdline=$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;popd&#x0D;&#x0A;cd&#x0D;&#x0A;echo move /Y $(InputDir)Parser.c Parser.cpp&#x0D;&#x0A;move /Y $(InputDir)Parser.c Parser.cpp"
-							Outputs="$(ProjectName)/Base/Parser.cpp"
+							CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison cmdline=$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;popd&#x0D;&#x0A;cd&#x0D;&#x0A;echo copy /Y $(InputDir)Parser.c Parser.cpp&#x0D;&#x0A;copy /Y $(InputDir)Parser.c Parser.cpp&#x0D;&#x0A;del /q $(InputDir)Parser.c"
+							Outputs="$(InputDir)$(InputName).cpp"
 						/>
 					</FileConfiguration>
 				</File>
