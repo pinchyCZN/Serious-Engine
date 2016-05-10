@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="EngineGUI"
-	ProjectGUID="{66BF4696-8D5B-4933-803E-AA4077224158}"
-	RootNamespace="EngineGUI"
+	Name="GameGUIMP"
+	ProjectGUID="{D32650A1-1C50-4219-AAB9-06099B52D16B}"
+	RootNamespace="GameGUIMP"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
@@ -20,7 +20,6 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
-			UseOfMFC="1"
 			CharacterSet="1"
 			>
 			<Tool
@@ -41,17 +40,15 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(SolutionDir)&quot;;&quot;$(SolutionDir)Engine\Sound\&quot;"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;ENGINEGUI_EXPORTS;DIRECT3D_VERSION=0x0800"
+				AdditionalIncludeDirectories="&quot;$(SolutionDir)&quot;;&quot;$(SolutionDir)Engine\Sound&quot;"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;GAMEGUIMP_EXPORTS;_AFXDLL;DIRECT3D_VERSION=0x0800"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				UsePrecompiledHeader="2"
-				PrecompiledHeaderThrough="StdH.h"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
-				DisableSpecificWarnings="4996;4333"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -64,11 +61,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName).dll"
+				AdditionalDependencies="EngineD.lib"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="$(SolutionDir)$(IntDir)"
-				IgnoreAllDefaultLibraries="false"
-				IgnoreDefaultLibraryNames=""
+				AdditionalLibraryDirectories="$(TargetDir)"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				ImportLibrary="$(TargetDir)$(TargetName)D.lib"
@@ -124,7 +119,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;ENGINEGUI_EXPORTS"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;GAMEGUIMP_EXPORTS"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
@@ -184,92 +179,127 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\DlgChooseTextureType.cpp"
+				RelativePath=".\ActionsListControl.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
+					ExcludedFromBuild="true"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\DlgCreateAnimatedTexture.cpp"
+				RelativePath=".\AxisListCtrl.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
+					ExcludedFromBuild="true"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\DlgCreateEffectTexture.cpp"
+				RelativePath=".\ConsoleSymbolsCombo.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\DlgAudioQuality.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\DlgConsole.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\DlgEditButtonAction.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
+					ExcludedFromBuild="true"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\DlgCreateNormalTexture.cpp"
+				RelativePath=".\DlgPlayerAppearance.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\DlgPlayerControls.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
+					ExcludedFromBuild="true"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\DlgSelectMode.cpp"
+				RelativePath=".\DlgPlayerSettings.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
+					ExcludedFromBuild="true"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\EngineGUI.cpp"
+				RelativePath=".\DlgRenameControls.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
+					ExcludedFromBuild="true"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
-						PrecompiledHeaderThrough=""
 					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\FileRequester.cpp"
+				RelativePath=".\DlgSelectPlayer.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
+					ExcludedFromBuild="true"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\StdH.cpp"
+				RelativePath=".\DlgVideoQuality.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\EditConsole.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\GameGUI.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\LocalPlayersList.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\PressKeyEditControl.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\StdAfx.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
@@ -277,18 +307,6 @@
 					<Tool
 						Name="VCCLCompilerTool"
 						UsePrecompiledHeader="1"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath=".\WndDisplayTexture.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
 					/>
 				</FileConfiguration>
 			</File>
@@ -304,10 +322,6 @@
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
-			<File
-				RelativePath=".\Graphics.rc"
-				>
-			</File>
 		</Filter>
 	</Files>
 	<Globals>

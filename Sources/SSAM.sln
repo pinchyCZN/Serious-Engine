@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ecc", "Ecc\Ecc.vcproj", "{0
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EntitiesMP", "EntitiesMP\EntitiesMP.vcproj", "{9F9B7DA8-BF60-4DA3-8F96-6E62A265AFBC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameGUIMP", "GameGUIMP\GameGUIMP.vcproj", "{D32650A1-1C50-4219-AAB9-06099B52D16B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -31,6 +33,10 @@ Global
 		{9F9B7DA8-BF60-4DA3-8F96-6E62A265AFBC}.Debug|Win32.Build.0 = Debug|Win32
 		{9F9B7DA8-BF60-4DA3-8F96-6E62A265AFBC}.Release|Win32.ActiveCfg = Release|Win32
 		{9F9B7DA8-BF60-4DA3-8F96-6E62A265AFBC}.Release|Win32.Build.0 = Release|Win32
+		{D32650A1-1C50-4219-AAB9-06099B52D16B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D32650A1-1C50-4219-AAB9-06099B52D16B}.Debug|Win32.Build.0 = Debug|Win32
+		{D32650A1-1C50-4219-AAB9-06099B52D16B}.Release|Win32.ActiveCfg = Release|Win32
+		{D32650A1-1C50-4219-AAB9-06099B52D16B}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
