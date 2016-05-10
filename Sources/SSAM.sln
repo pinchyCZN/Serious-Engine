@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DecodeReport", "DecodeRepor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DedicatedServer", "DedicatedServer\DedicatedServer.vcproj", "{57ED976D-8DA5-43EB-BBB4-262A359CFB7A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Depend", "Depend\Depend.vcproj", "{4AD93CEA-00AC-40D6-8B5E-C4A56ABF068E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -55,6 +57,10 @@ Global
 		{57ED976D-8DA5-43EB-BBB4-262A359CFB7A}.Debug|Win32.Build.0 = Debug|Win32
 		{57ED976D-8DA5-43EB-BBB4-262A359CFB7A}.Release|Win32.ActiveCfg = Release|Win32
 		{57ED976D-8DA5-43EB-BBB4-262A359CFB7A}.Release|Win32.Build.0 = Release|Win32
+		{4AD93CEA-00AC-40D6-8B5E-C4A56ABF068E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4AD93CEA-00AC-40D6-8B5E-C4A56ABF068E}.Debug|Win32.Build.0 = Debug|Win32
+		{4AD93CEA-00AC-40D6-8B5E-C4A56ABF068E}.Release|Win32.ActiveCfg = Release|Win32
+		{4AD93CEA-00AC-40D6-8B5E-C4A56ABF068E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
