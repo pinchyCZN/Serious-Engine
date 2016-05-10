@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="GameMP"
-	ProjectGUID="{A2DE1EFA-8692-48CF-8E5B-1717EDD77DE9}"
-	RootNamespace="GameMP"
+	Name="libvorbis"
+	ProjectGUID="{EB382290-DC12-40EE-AA62-1234413F25BC}"
+	RootNamespace="libvorbis"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
@@ -40,15 +40,16 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(SolutionDir)&quot;;&quot;$(SolutionDir)Engine\Sound&quot;"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;GAMEMP_EXPORTS"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)include&quot;;&quot;$(SolutionDir)libogg\include&quot;"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBVORBIS_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="1"
+				RuntimeLibrary="3"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
+				DisableSpecificWarnings="4244"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -61,12 +62,12 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="user32.lib EngineD.lib EntitiesMPD.lib"
+				AdditionalDependencies="libogg.lib"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="$(TargetDir)"
+				ModuleDefinitionFile="vorbis.def"
 				GenerateDebugInformation="true"
 				SubSystem="2"
-				ImportLibrary="$(TargetDir)$(TargetName)D.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -119,7 +120,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;GAMEMP_EXPORTS"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBVORBIS_EXPORTS"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
@@ -178,66 +179,94 @@
 			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
-			<File
-				RelativePath=".\Camera.cpp"
+			<Filter
+				Name="lib"
 				>
-			</File>
-			<File
-				RelativePath=".\CompMessage.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\CompModels.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Computer.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Console.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Controls.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Game.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\LCDDrawing.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\LoadingHook.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Map.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\SessionProperties.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\StdAfx.cpp"
-				>
-				<FileConfiguration
-					Name="Debug|Win32"
+				<File
+					RelativePath=".\lib\analysis.c"
 					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath=".\WEDInterface.cpp"
-				>
-			</File>
+				</File>
+				<File
+					RelativePath=".\lib\bitrate.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\block.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\codebook.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\envelope.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\floor0.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\floor1.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\info.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\lookup.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\lpc.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\lsp.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\mapping0.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\mdct.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\psy.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\registry.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\res0.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\sharedbook.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\smallft.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\synthesis.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\vorbisenc.c"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\window.c"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
