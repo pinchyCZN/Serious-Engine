@@ -177,9 +177,11 @@ void CDlgCreateAnimatedTexture::DoDataExchange(CDataExchange* pDX)
 	//{{AFX_DATA_MAP(CDlgCreateAnimatedTexture)
 	DDX_Control(pDX, IDC_CHEQUERED_ALPHA, m_ctrlCheckButton);
 	DDX_Control(pDX, IDC_TEXTURE_ANIMATIONS, m_ctrlAnimationsCombo);
+#ifdef __TESTBUILD
 	DDX_Text(pDX, IDC_EDIT_SCRIPT, m_strEditScript);
 	DDX_Text(pDX, IDC_SIZE_IN_PIXELS, m_strSizeInPixels);
 	DDX_Text(pDX, IDC_TEXTURE_NAME, m_strCreatedTextureName);
+#endif
 	//}}AFX_DATA_MAP
 
   // if dialog is giving data

@@ -176,8 +176,10 @@ void CDlgCreateNormalTexture::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_FORCE32, m_ctrlForce32);
 	DDX_Control(pDX, IDC_CHEQUERED_ALPHA, m_ctrlCheckButton);
 	DDX_Control(pDX, IDC_MEX_SIZE, m_ctrlMexSizeCombo);
+#ifdef __TESTBUILD
 	DDX_Text(pDX, IDC_CREATED_TEXTURE_NAME, m_strCreatedTextureName);
 	DDX_Text(pDX, IDC_SIZE_IN_PIXELS, m_strSizeInPixels);
+#endif
 	DDX_Check(pDX, IDC_CREATE_MIPMAPS, m_bCreateMipmaps);
 	//}}AFX_DATA_MAP
   

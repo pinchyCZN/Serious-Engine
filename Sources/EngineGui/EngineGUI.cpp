@@ -260,19 +260,28 @@ CTFileName CEngineGUI::CreateTexture(CTFileName fnTexFileToRecreate/*=CTString("
 
 void CEngineGUI::GetFullScreenModeFromRegistry( CTString strSectionName, CDisplayMode &dm, GfxAPIType &gat)
 {
-  // prepare full screen mode as default
-  dm.dm_pixSizeI = 640;
-  dm.dm_pixSizeJ = 480;
-  dm.dm_ddDepth  = DD_DEFAULT;
-  // read FS parameters from registry
-  CTString strResult = CStringA(AfxGetApp()->GetProfileString( CString(strSectionName), L"Full screen mode", L"640 x 480 x 0"));
-  strResult.ScanF( "%d x %d x %d", &dm.dm_pixSizeI, &dm.dm_pixSizeJ, &dm.dm_ddDepth);
-  if( dm.dm_ddDepth<DD_DEFAULT || dm.dm_ddDepth>DD_32BIT) dm.dm_ddDepth = DD_DEFAULT;
-  strResult = CStringA(AfxGetApp()->GetProfileString( CString(strSectionName), L"Full screen API", L"OpenGL"));
+	// prepare full screen mode as default
+	dm.dm_pixSizeI = 640;
+	dm.dm_pixSizeJ = 480;
+	dm.dm_ddDepth  = DD_DEFAULT;
+	// read FS parameters from registry
+	TCHAR result[256]={0};
+	CString app(strSectionName);
+	GetProfileString(app,L"Full screen mode", L"640 x 480 x 0",result,sizeof(result)/sizeof(TCHAR));
+	CTString strResult=CStringA(result);
+	strResult.ScanF( "%d x %d x %d", &dm.dm_pixSizeI, &dm.dm_pixSizeJ, &dm.dm_ddDepth);
+	//CTString strResult = CStringA(AfxGetApp()->GetProfileString( CString(strSectionName), L"Full screen mode", L"640 x 480 x 0"));
+	//strResult.ScanF( "%d x %d x %d", &dm.dm_pixSizeI, &dm.dm_pixSizeJ, &dm.dm_ddDepth);
+	if( dm.dm_ddDepth<DD_DEFAULT || dm.dm_ddDepth>DD_32BIT) dm.dm_ddDepth = DD_DEFAULT;
+	//strResult = CStringA(AfxGetApp()->GetProfileString( CString(strSectionName), L"Full screen API", L"OpenGL"));
+	GetProfileString(app,L"Full screen API", L"OpenGL",result,sizeof(result)/sizeof(TCHAR));
+	strResult=CStringA(result);
+	//strResult = CStringA(AfxGetApp()->GetProfileString( CString(strSectionName), L"Full screen API", L"OpenGL"));
+
 #ifdef SE1_D3D
-  gat = (strResult=="Direct3D") ? GAT_D3D : GAT_OGL;
+	gat = (strResult=="Direct3D") ? GAT_D3D : GAT_OGL;
 #else // SE1_D3D
-  gat = GAT_OGL;
+	gat = GAT_OGL;
 #endif // SE1_D3D
 }
 

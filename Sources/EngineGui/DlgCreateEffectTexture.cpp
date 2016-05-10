@@ -226,9 +226,11 @@ void CDlgCreateEffectTexture::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_PIX_HEIGHT, m_ctrlPixHeightCombo);
 	DDX_Control(pDX, IDC_EFFECT_CLASS, m_ctrlEffectClassCombo);
 	DDX_Control(pDX, IDC_EFFECT_TYPE, m_ctrlEffectTypeCombo);
+#ifdef __TESTBUILD
 	DDX_Text(pDX, IDC_CREATED_TEXTURE_NAME, m_strCreatedTextureName);
 	DDX_Text(pDX, IDC_BASE_TEXTURE_NAME, m_strBaseTextureName);
 	DDX_Text(pDX, IDC_REND_SPEED, m_strRendSpeed);
+#endif
 	//}}AFX_DATA_MAP
   
   // if dialog is giving data

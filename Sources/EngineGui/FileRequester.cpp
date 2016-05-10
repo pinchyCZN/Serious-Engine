@@ -206,8 +206,11 @@ CTFileName CEngineGUI::FileRequester(
   CString strRequestInDirectory = _fnmApplicationPath+strDefaultDir;
   if( pchrRegistry != NULL)
   {
-    strRequestInDirectory = AfxGetApp()->GetProfileString(L"Scape", CString(pchrRegistry), 
-      CString(_fnmApplicationPath+strDefaultDir));
+	TCHAR tmp[256]={0};
+	GetProfileString(L"Scape", CString(pchrRegistry),CString(_fnmApplicationPath+strDefaultDir),tmp,sizeof(tmp)/sizeof(TCHAR));
+	strRequestInDirectory=CString(tmp);
+    //strRequestInDirectory = AfxGetApp()->GetProfileString(L"Scape", CString(pchrRegistry), 
+    //  CString(_fnmApplicationPath+strDefaultDir));
   }
 
   // if directory is not inside engine dir

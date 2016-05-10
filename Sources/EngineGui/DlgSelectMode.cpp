@@ -238,8 +238,10 @@ void CDlgSelectMode::DoDataExchange(CDataExchange* pDX)
 	//{{AFX_DATA_MAP(CDlgSelectMode)
 	DDX_Control(pDX, IDC_RESOLUTIONS, m_ctrlResCombo);
 	DDX_Control(pDX, IDC_API, m_ctrlDriverCombo);
+#ifdef __TESTBUILD
 	DDX_Text(pDX, IDC_CURRENT_MODE, m_strCurrentMode);
 	DDX_Text(pDX, IDC_CURRENT_DRIVER, m_strCurrentDriver);
+#endif
 	DDX_Radio(pDX, IDC_COLOR_DEFAULT, m_iColor);
 	//}}AFX_DATA_MAP
 
