@@ -67,7 +67,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="EngineD.lib"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories="&quot;$(OutDir)&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
@@ -1348,6 +1350,34 @@
 				>
 				<File
 					RelativePath=".\StdH\StdH.cpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Common"
+				>
+				<File
+					RelativePath=".\Common\Common.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Common\EmanatingParticles.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Common\HUD.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Common\Particles.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Common\PathFinding.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Common\Stats.cpp"
 					>
 				</File>
 			</Filter>
