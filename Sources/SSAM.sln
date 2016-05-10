@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DedicatedServer", "Dedicate
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Depend", "Depend\Depend.vcproj", "{4AD93CEA-00AC-40D6-8B5E-C4A56ABF068E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libogg", "libogg\libogg.vcproj", "{6856FA9D-DF00-4CBC-B9F4-979D30AB4A7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -61,6 +63,10 @@ Global
 		{4AD93CEA-00AC-40D6-8B5E-C4A56ABF068E}.Debug|Win32.Build.0 = Debug|Win32
 		{4AD93CEA-00AC-40D6-8B5E-C4A56ABF068E}.Release|Win32.ActiveCfg = Release|Win32
 		{4AD93CEA-00AC-40D6-8B5E-C4A56ABF068E}.Release|Win32.Build.0 = Release|Win32
+		{6856FA9D-DF00-4CBC-B9F4-979D30AB4A7F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6856FA9D-DF00-4CBC-B9F4-979D30AB4A7F}.Debug|Win32.Build.0 = Debug|Win32
+		{6856FA9D-DF00-4CBC-B9F4-979D30AB4A7F}.Release|Win32.ActiveCfg = Release|Win32
+		{6856FA9D-DF00-4CBC-B9F4-979D30AB4A7F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
