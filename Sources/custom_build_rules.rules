@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioToolFile
+	Name="custome build rules"
+	Version="8.00"
+	>
+	<Rules>
+		<CustomBuildRule
+			Name="ecc compiler"
+			DisplayName="ecc compiler"
+			CommandLine="echo &quot;$(SolutionDir)..\bin\ecc.exe&quot; $(ProjectName)\$(InputFileName)&#x0D;&#x0A;cd &quot;$(InputDir)&quot;&#x0D;&#x0A;&quot;$(SolutionDir)..\bin\ecc.exe&quot; $(InputFileName)&#x0D;&#x0A;"
+			Outputs="$(InputDir)$(InputName).cpp"
+			FileExtensions="*.es"
+			ExecutionDescription="Executing tool..."
+			>
+			<Properties>
+			</Properties>
+		</CustomBuildRule>
+	</Rules>
+</VisualStudioToolFile>

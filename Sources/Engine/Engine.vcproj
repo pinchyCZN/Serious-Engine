@@ -65,7 +65,7 @@
 				AdditionalDependencies="Gdi32.lib Dbghelp.lib"
 				LinkIncremental="2"
 				IgnoreAllDefaultLibraries="false"
-				IgnoreDefaultLibraryNames="libci.lib"
+				IgnoreDefaultLibraryNames="libci.lib;msvcrtd.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				ImportLibrary="$(TargetDir)$(TargetName)D.lib"
@@ -188,7 +188,7 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="echo intdir-$(IntDir) &gt;$(InputDir)paths.txt&#x0D;&#x0A;echo outdir=$(OutDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo inputdir=$(InputDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputPath)=$(InputPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputName)=$(InputName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputFileName)=$(InputFileName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputExt)=$(InputExt) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (ProjectDir)=$(ProjectDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (ProjectPath)=$(ProjectPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (SolutionDir)=$(SolutionDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (SolutionPath)=$(SolutionPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetDir)=$(TargetDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetPath)=$(TargetPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetName)=$(TargetName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetFileName)=$(TargetFileName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;"
+						CommandLine="echo (IntDir)=$(IntDir) &gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (OutDir)=$(OutDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputDir)=$(InputDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputPath)=$(InputPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputName)=$(InputName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputFileName)=$(InputFileName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputExt)=$(InputExt) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (ProjectName)=$(ProjectName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (ProjectDir)=$(ProjectDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (ProjectPath)=$(ProjectPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (SolutionName)=$(SolutionName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (SolutionDir)=$(SolutionDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (SolutionPath)=$(SolutionPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetDir)=$(TargetDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetPath)=$(TargetPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetName)=$(TargetName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetFileName)=$(TargetFileName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;&#x0D;&#x0A;"
 						Outputs="$(InputDir)/$(InputName).cpp"
 					/>
 				</FileConfiguration>
