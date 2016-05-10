@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameGUIMP", "GameGUIMP\Game
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameMP", "GameMP\GameMP.vcproj", "{A2DE1EFA-8692-48CF-8E5B-1717EDD77DE9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DecodeReport", "DecodeReport\DecodeReport.vcproj", "{63E44B25-E4C0-458D-BA46-4FCAD5BC8C2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -43,6 +45,10 @@ Global
 		{A2DE1EFA-8692-48CF-8E5B-1717EDD77DE9}.Debug|Win32.Build.0 = Debug|Win32
 		{A2DE1EFA-8692-48CF-8E5B-1717EDD77DE9}.Release|Win32.ActiveCfg = Release|Win32
 		{A2DE1EFA-8692-48CF-8E5B-1717EDD77DE9}.Release|Win32.Build.0 = Release|Win32
+		{63E44B25-E4C0-458D-BA46-4FCAD5BC8C2A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{63E44B25-E4C0-458D-BA46-4FCAD5BC8C2A}.Debug|Win32.Build.0 = Debug|Win32
+		{63E44B25-E4C0-458D-BA46-4FCAD5BC8C2A}.Release|Win32.ActiveCfg = Release|Win32
+		{63E44B25-E4C0-458D-BA46-4FCAD5BC8C2A}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
