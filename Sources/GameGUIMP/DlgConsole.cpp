@@ -44,7 +44,9 @@ void CDlgConsole::DoDataExchange(CDataExchange* pDX)
 	//{{AFX_DATA_MAP(CDlgConsole)
 	DDX_Control(pDX, IDC_CONSOLE_SYMBOLS, m_ctrConsoleSymbolsCombo);
 	DDX_Control(pDX, IDC_CONSOLE_INPUT, m_ctrlEditConsole);
+#ifdef __TESTBUILD
 	DDX_Text(pDX, IDC_CONSOLE_OUTPUT, m_strConsoleOutput);
+#endif
 	//}}AFX_DATA_MAP
 
   // if dialog is reciving data

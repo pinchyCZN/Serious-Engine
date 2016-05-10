@@ -100,7 +100,12 @@ BOOL CEditConsole::PreTranslateMessage(MSG* pMsg)
       SetTextFromConsole();
       // remember input text into console input buffer
       CString sHistory;
-      GetWindowText(sHistory);
+	  {
+		  TCHAR tmp[512]={0};
+#ifdef __TESTBUILD
+		GetWindowText(sHistory);
+#endif
+	  }
       _pGame->gam_strConsoleInputBuffer = CStringA(sHistory);
     }
     // if Ctrl is not pressed and current line is not last line, "swallow return"

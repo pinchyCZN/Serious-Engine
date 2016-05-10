@@ -55,7 +55,17 @@ BOOL CConsoleSymbolsCombo::PreTranslateMessage(MSG* pMsg)
     if( iSelectedSymbol != LB_ERR)
     {
       CString strSelectedSymbolW;
+	  TCHAR tmp[256]={0};
+	  int len;
+#ifdef __TESTBUILD
       GetLBText( iSelectedSymbol, strSelectedSymbolW);
+#else
+	  len=SendMessage(CB_GETLBTEXTLEN,iSelectedSymbol,0);
+	  if(len<(sizeof(tmp)/sizeof(TCHAR))){
+		SendMessage(CB_GETLBTEXT,iSelectedSymbol,(LPARAM)tmp);
+		strSelectedSymbolW=CString(tmp);
+	  }
+#endif
       CTString strSelectedSymbol = CStringA(strSelectedSymbolW);
 
       INDEX ctLetters = strlen(strSelectedSymbol);
