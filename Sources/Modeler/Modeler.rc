@@ -1998,7 +1998,6 @@ END
 STRINGTABLE DISCARDABLE 
 BEGIN
     AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
-    IDS_INFO_TITLE          "Model info"
     IDS_DEFAULT_FONT        "MS Sans Serif"
     IDS_DEFAULT_ARIAL       "Arial"
 END
