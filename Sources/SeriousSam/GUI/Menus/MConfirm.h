@@ -29,8 +29,8 @@ public:
   CMGButton gm_mgConfirmYes;
   CMGButton gm_mgConfirmNo;
 
-  void(*_pConfimedYes)(void) = NULL;
-  void(*_pConfimedNo)(void) = NULL;
+  void(*_pConfimedYes)(void);
+  void(*_pConfimedNo)(void);
 
   void Initialize_t(void);
   // return TRUE if handled
