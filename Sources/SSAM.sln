@@ -23,6 +23,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libogg", "libogg\libogg.vcp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvorbis", "libvorbis\libvorbis.vcproj", "{EB382290-DC12-40EE-AA62-1234413F25BC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libvorbisfile", "libvorbis\libvorbisfile.vcproj", "{4A5BB6FF-6C54-4538-82E2-71ABE9A81860}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LWSkaExporter", "LWSkaExporter\LWSkaExporter.vcproj", "{11CA773C-ADC4-42BB-A662-E5781E79F7AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -73,6 +77,14 @@ Global
 		{EB382290-DC12-40EE-AA62-1234413F25BC}.Debug|Win32.Build.0 = Debug|Win32
 		{EB382290-DC12-40EE-AA62-1234413F25BC}.Release|Win32.ActiveCfg = Release|Win32
 		{EB382290-DC12-40EE-AA62-1234413F25BC}.Release|Win32.Build.0 = Release|Win32
+		{4A5BB6FF-6C54-4538-82E2-71ABE9A81860}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4A5BB6FF-6C54-4538-82E2-71ABE9A81860}.Debug|Win32.Build.0 = Debug|Win32
+		{4A5BB6FF-6C54-4538-82E2-71ABE9A81860}.Release|Win32.ActiveCfg = Release|Win32
+		{4A5BB6FF-6C54-4538-82E2-71ABE9A81860}.Release|Win32.Build.0 = Release|Win32
+		{11CA773C-ADC4-42BB-A662-E5781E79F7AA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{11CA773C-ADC4-42BB-A662-E5781E79F7AA}.Debug|Win32.Build.0 = Debug|Win32
+		{11CA773C-ADC4-42BB-A662-E5781E79F7AA}.Release|Win32.ActiveCfg = Release|Win32
+		{11CA773C-ADC4-42BB-A662-E5781E79F7AA}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
