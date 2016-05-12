@@ -65,14 +65,14 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="mfc80ud.lib mfcs80ud.lib eafxisd.lib"
-				OutputFile="$(OutDir)\$(ProjectName).dll"
+				OutputFile="$(OutDir)\$(ProjectName)D.dll"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="$(SolutionDir)$(IntDir)"
 				IgnoreAllDefaultLibraries="false"
 				IgnoreDefaultLibraryNames="msvcrtd.lib;uafxcwd.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
-				ImportLibrary="$(TargetDir)$(TargetName)D.lib"
+				ImportLibrary="$(TargetDir)$(TargetName).lib"
 				TargetMachine="1"
 			/>
 			<Tool
