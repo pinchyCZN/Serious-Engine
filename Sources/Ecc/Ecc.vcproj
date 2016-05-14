@@ -41,7 +41,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="&quot;$(SolutionDir)&quot;;&quot;$(ProjectDir)&quot;"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
@@ -191,7 +191,7 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison args=$(SolutionDir)..\Tools.Win32\bison -d -o $(Inputdir)$(InputName).c $(InputPath)&#x0D;&#x0A;$(SolutionDir)..\Tools.Win32\bison -d -o $(InputDir)$(InputName).c $(InputPath)&#x0D;&#x0A;popd&#x0D;&#x0A;copy /Y $(InputDir)$(InputName).c $(InputDir)$(InputName).cpp&#x0D;&#x0A;del /Q $(InputDir)$(InputName).c"
+						CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison args=$(SolutionDir)..\Tools.Win32\bison -d -o $(Inputdir)$(InputName).c $(InputPath)&#x0D;&#x0A;$(SolutionDir)..\Tools.Win32\bison -d -o $(InputDir)$(InputName).c $(InputPath)&#x0D;&#x0A;popd&#x0D;&#x0A;copy /Y $(InputDir)$(InputName).c $(InputDir)$(InputName).cpp&#x0D;&#x0A;del /Q $(InputDir)$(InputName).c&#x0D;&#x0A;"
 						Outputs="$(Inputdir)$(InputName).cpp"
 					/>
 				</FileConfiguration>
