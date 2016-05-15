@@ -122,8 +122,9 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS"
-				RuntimeLibrary="2"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)Base&quot;;&quot;$(ProjectDir)Sound&quot;;&quot;$(ProjectDir)..\&quot;;&quot;$(ProjectDir)&quot;;&quot;$(SolutionDir)&quot;;&quot;$(SolutionDir)libvorbis\include&quot;;&quot;$(SolutionDir)libogg\include&quot;"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS;_CRT_SECURE_NO_WARNINGS"
+				RuntimeLibrary="0"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
@@ -140,6 +141,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="Dbghelp.lib"
 				LinkIncremental="1"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -193,6 +195,15 @@
 						Outputs="$(InputDir)/$(InputName).cpp"
 					/>
 				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="echo (Configuration)=$(Configuration) &gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (IntDir)=$(IntDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (OutDir)=$(OutDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputDir)=$(InputDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputPath)=$(InputPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputName)=$(InputName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputFileName)=$(InputFileName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (InputExt)=$(InputExt) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (ProjectName)=$(ProjectName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (ProjectDir)=$(ProjectDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (ProjectPath)=$(ProjectPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (SolutionName)=$(SolutionName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (SolutionDir)=$(SolutionDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (SolutionPath)=$(SolutionPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetDir)=$(TargetDir) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetPath)=$(TargetPath) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetName)=$(TargetName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;echo (TargetFileName)=$(TargetFileName) &gt;&gt;$(InputDir)paths.txt&#x0D;&#x0A;&#x0D;&#x0A;"
+						Outputs="$(InputDir)/$(InputName).cpp"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath=".\Engine.cpp"
@@ -203,6 +214,15 @@
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+						PrecompiledHeaderThrough="StdH.h"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
@@ -282,6 +302,15 @@
 							Outputs="$(InputDir)$(InputName).cpp"
 						/>
 					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison cmdline=$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\bison -d -o $(ProjectName)/Base/Parser.c $(ProjectName)/Base/Parser.y&#x0D;&#x0A;popd&#x0D;&#x0A;cd&#x0D;&#x0A;echo copy /Y $(InputDir)Parser.c $(InputDir)Parser.cpp&#x0D;&#x0A;copy /Y $(InputDir)Parser.c $(InputDir)Parser.cpp&#x0D;&#x0A;del /q $(InputDir)Parser.c&#x0D;&#x0A;"
+							Outputs="$(InputDir)$(InputName).cpp"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Base\Profiling.cpp"
@@ -316,6 +345,15 @@
 					>
 					<FileConfiguration
 						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo scanner arg=$(SolutionDir)..\Tools.win32\flex -o$(InputDir)Scanner.cpp -S$(ProjectDir)Base\Flex.skl $(InputPath)&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\flex -o$(InputDir)Scanner.cpp -S$(ProjectDir)Base\Flex.skl $(InputPath)&#x0D;&#x0A;"
+							Outputs=" $(InputDir)Scanner.cpp"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
 						>
 						<Tool
 							Name="VCCustomBuildTool"
@@ -940,6 +978,15 @@
 							Outputs="$(inputdir)$(inputname).cpp"
 						/>
 					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison args=$(SolutionDir)..\Tools.Win32\bison -d -psyy -o $(ProjectName)/Ska/smcPars.c $(ProjectName)/Ska/smcPars.y&#x0D;&#x0A;$(SolutionDir)..\Tools.Win32\bison -d -psyy -o $(ProjectName)/Ska/smcPars.c $(ProjectName)/Ska/smcPars.y&#x0D;&#x0A;popd&#x0D;&#x0A;copy /Y $(InputDir)smcPars.c $(InputDir)smcPars.cpp&#x0D;&#x0A;del /Q $(InputDir)smcPars.c&#x0D;&#x0A;"
+							Outputs="$(inputdir)$(inputname).cpp"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Ska\smcScan.cpp"
@@ -950,6 +997,15 @@
 					>
 					<FileConfiguration
 						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo scanner arg=$(SolutionDir)..\Tools.win32\flex -o$(InputDir)smcScan.cpp -S$(ProjectDir)ska\smcFlex.skl $(InputPath)&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\flex -o$(InputDir)smcScan.cpp -S$(ProjectDir)Base\Flex.skl $(InputPath)&#x0D;&#x0A;"
+							Outputs="$(inputdir)$(inputname).cpp"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
 						>
 						<Tool
 							Name="VCCustomBuildTool"
