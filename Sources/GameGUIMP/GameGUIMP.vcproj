@@ -62,11 +62,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="EngineD.lib mfc80ud.lib mfcs80ud.lib"
+				AdditionalDependencies="EngineD.lib mfc80ud.lib mfcs80ud.lib msvcrtd.lib"
 				OutputFile="$(OutDir)\$(ProjectName)D.dll"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="$(TargetDir)"
-				IgnoreDefaultLibraryNames="msvcrtd.lib;uafxcwd.lib"
+				IgnoreDefaultLibraryNames="msvcrtd.lib;uafxcwd.lib;libcmtd.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				ImportLibrary="$(TargetDir)$(TargetName).lib"

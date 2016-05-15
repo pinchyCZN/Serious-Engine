@@ -65,7 +65,7 @@
 				OutputFile="$(OutDir)\$(ProjectName)D.dll"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="$(TargetDir)"
-				IgnoreDefaultLibraryNames="LIBCMTD.lib"
+				IgnoreDefaultLibraryNames="msvcrtd.lib;libcmtd.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				ImportLibrary="$(TargetDir)$(TargetName).lib"

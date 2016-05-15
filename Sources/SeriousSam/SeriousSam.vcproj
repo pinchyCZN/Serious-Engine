@@ -44,7 +44,7 @@
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
+				RuntimeLibrary="1"
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="StdH.h"
 				WarningLevel="3"
@@ -62,9 +62,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="GameMPD.lib"
+				AdditionalDependencies="GameMPD.lib msvcrtd.lib"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="$(TargetDir)"
+				IgnoreDefaultLibraryNames="msvcrtd.lib;libcmtd.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"

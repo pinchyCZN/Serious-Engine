@@ -46,8 +46,8 @@
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
-				UsePrecompiledHeader="0"
-				PrecompiledHeaderThrough=""
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderThrough="stdH.h"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
@@ -64,12 +64,12 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="mfc80ud.lib mfcs80ud.lib eafxisd.lib"
+				AdditionalDependencies="mfc80ud.lib mfcs80ud.lib eafxisd.lib msvcrtd.lib"
 				OutputFile="$(OutDir)\$(ProjectName)D.dll"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="$(SolutionDir)$(IntDir)"
 				IgnoreAllDefaultLibraries="false"
-				IgnoreDefaultLibraryNames="msvcrtd.lib;uafxcwd.lib"
+				IgnoreDefaultLibraryNames="msvcrtd.lib;libcmtd.lib;uafxcwd.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				ImportLibrary="$(TargetDir)$(TargetName).lib"
@@ -252,8 +252,8 @@
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
-						PrecompiledHeaderThrough=""
+						UsePrecompiledHeader="2"
+						PrecompiledHeaderThrough="Stdh.H"
 					/>
 				</FileConfiguration>
 			</File>
@@ -278,6 +278,7 @@
 					<Tool
 						Name="VCCLCompilerTool"
 						UsePrecompiledHeader="1"
+						PrecompiledHeaderThrough="StdH.h"
 					/>
 				</FileConfiguration>
 			</File>

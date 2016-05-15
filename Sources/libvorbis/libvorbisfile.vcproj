@@ -64,6 +64,7 @@
 				AdditionalDependencies="libogg.lib libvorbis.lib"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="&quot;$(TargetDir)&quot;"
+				IgnoreDefaultLibraryNames="msvcrtd.lib"
 				ModuleDefinitionFile="vorbisfile.def"
 				GenerateDebugInformation="true"
 				SubSystem="2"
