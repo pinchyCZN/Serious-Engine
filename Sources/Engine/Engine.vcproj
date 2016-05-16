@@ -435,6 +435,16 @@
 							Outputs="$(InputDir)/$(InputName).cpp"
 						/>
 					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo $(SolutionDir)..\bin\ecc.exe&#x0D;&#x0A;cd $(SolutionDir)&#x0D;&#x0A;&quot;$(SolutionDir)..\bin\ecc.exe&quot; Engine/Classes/$(InputFileName)&#x0D;&#x0A;"
+							AdditionalDependencies=""
+							Outputs="$(InputDir)$(InputName).cpp"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Classes\MovableBrushEntity.cpp"
@@ -452,6 +462,16 @@
 							Outputs="$(InputDir)/$(InputName).cpp"
 						/>
 					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo $(SolutionDir)..\bin\ecc.exe&#x0D;&#x0A;cd $(SolutionDir)&#x0D;&#x0A;&quot;$(SolutionDir)..\bin\ecc.exe&quot; Engine/Classes/$(InputFileName)&#x0D;&#x0A;"
+							AdditionalDependencies=""
+							Outputs="$(InputDir)/$(InputName).cpp"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Classes\MovableEntity.cpp"
@@ -462,6 +482,15 @@
 					>
 					<FileConfiguration
 						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo $(SolutionDir)..\bin\ecc.exe&#x0D;&#x0A;cd $(SolutionDir)&#x0D;&#x0A;&quot;$(SolutionDir)..\bin\ecc.exe&quot; Engine/Classes/$(InputFileName)&#x0D;&#x0A;"
+							Outputs="$(InputDir)/$(InputName).cpp"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
 						>
 						<Tool
 							Name="VCCustomBuildTool"
@@ -486,6 +515,15 @@
 							Outputs="$(InputDir)/$(InputName).cpp"
 						/>
 					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo $(SolutionDir)..\bin\ecc.exe&#x0D;&#x0A;cd $(SolutionDir)&#x0D;&#x0A;&quot;$(SolutionDir)..\bin\ecc.exe&quot; Engine/Classes/$(InputFileName)&#x0D;&#x0A;"
+							Outputs="$(InputDir)/$(InputName).cpp"
+						/>
+					</FileConfiguration>
 				</File>
 				<File
 					RelativePath=".\Classes\PlayerEntity.cpp"
@@ -496,6 +534,15 @@
 					>
 					<FileConfiguration
 						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="echo $(SolutionDir)..\bin\ecc.exe&#x0D;&#x0A;cd $(SolutionDir)&#x0D;&#x0A;&quot;$(SolutionDir)..\bin\ecc.exe&quot; Engine/Classes/$(InputFileName)&#x0D;&#x0A;"
+							Outputs="$(InputDir)/$(InputName).cpp"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
 						>
 						<Tool
 							Name="VCCustomBuildTool"
@@ -997,6 +1044,7 @@
 					>
 					<FileConfiguration
 						Name="Debug|Win32"
+						ExcludedFromBuild="true"
 						>
 						<Tool
 							Name="VCCustomBuildTool"
@@ -1006,6 +1054,7 @@
 					</FileConfiguration>
 					<FileConfiguration
 						Name="Release|Win32"
+						ExcludedFromBuild="true"
 						>
 						<Tool
 							Name="VCCustomBuildTool"
