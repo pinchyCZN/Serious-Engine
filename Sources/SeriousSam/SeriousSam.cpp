@@ -1430,7 +1430,7 @@ void StartNewMode( enum GfxAPIType eGfxAPI, INDEX iAdapter, PIX pixSizeI, PIX pi
     CPrintF( TRANS("Requested display mode could not be set!\n"));
     pixSizeI = 640;
     pixSizeJ = 480;
-    bFullScreenMode = TRUE;
+    bFullScreenMode = FALSE;
     // try to revert to one of recovery modes
     for( INDEX iMode=0; iMode<ctDefaultModes; iMode++) {
       eColorDepth = (DisplayDepth)aDefaultModes[iMode][0];

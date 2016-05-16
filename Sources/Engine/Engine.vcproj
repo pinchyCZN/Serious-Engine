@@ -62,7 +62,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="Dbghelp.lib msvcrtd.lib"
+				AdditionalDependencies="gdi32.lib Dbghelp.lib msvcrtd.lib"
 				OutputFile="$(OutDir)\$(ProjectName)D.dll"
 				LinkIncremental="2"
 				IgnoreAllDefaultLibraries="false"
@@ -141,8 +141,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="Dbghelp.lib"
+				AdditionalDependencies="gdi32.lib Dbghelp.lib msvcrt.lib"
 				LinkIncremental="1"
+				IgnoreDefaultLibraryNames="libcmt.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"

@@ -140,9 +140,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="Engine.lib EntitiesMP.lib"
+				AdditionalDependencies="Engine.lib EntitiesMP.lib msvcrt.lib"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="$(TargetDir)"
+				IgnoreDefaultLibraryNames="msvcrt.lib;libcmt.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"

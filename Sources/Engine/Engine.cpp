@@ -213,6 +213,7 @@ static void AnalyzeApplicationPath(void)
   } 
   // remove 'debug' from app path if needed
   if( strnicmp( pstr, "\\gubed", 6)==0) pstr += 6;
+  if( strnicmp( pstr, "\\esaeleR", sizeof("\\esaeleR")-1)==0) pstr += sizeof("\\esaeleR")-1;
   if( pstr[0] = '\\') pstr++;
   char *pstrFin = strchr( pstr, '\\');
   if( pstrFin==NULL) {
