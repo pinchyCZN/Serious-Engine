@@ -20,7 +20,8 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
-			CharacterSet="1"
+			UseOfMFC="2"
+			CharacterSet="2"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -44,7 +45,7 @@
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="1"
+				RuntimeLibrary="3"
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="StdH.h"
 				WarningLevel="3"
@@ -62,10 +63,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="GameMPD.lib msvcrtd.lib"
+				AdditionalDependencies="user32.lib Gdi32.lib Shell32.lib kernel32.lib GameMPD.lib EngineD.lib"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="$(TargetDir)"
-				IgnoreDefaultLibraryNames="msvcrtd.lib;libcmtd.lib"
+				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
