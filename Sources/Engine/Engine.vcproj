@@ -103,6 +103,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
+			UseOfMFC="2"
 			CharacterSet="1"
 			WholeProgramOptimization="1"
 			>
@@ -127,11 +128,12 @@
 				AdditionalIncludeDirectories="&quot;$(ProjectDir)Base&quot;;&quot;$(ProjectDir)Sound&quot;;&quot;$(ProjectDir)..\&quot;;&quot;$(ProjectDir)&quot;;&quot;$(SolutionDir)&quot;;&quot;$(SolutionDir)libvorbis\include&quot;;&quot;$(SolutionDir)libogg\include&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS;_CRT_SECURE_NO_WARNINGS"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="0"
+				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="3"
+				DisableSpecificWarnings="4267;4333"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -144,9 +146,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="gdi32.lib Dbghelp.lib msvcrt.lib"
+				AdditionalDependencies="gdi32.lib Dbghelp.lib"
 				LinkIncremental="1"
-				IgnoreDefaultLibraryNames="libcmt.lib"
+				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
