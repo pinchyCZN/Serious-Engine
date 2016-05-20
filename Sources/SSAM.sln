@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RCon", "RCon\RCon.vcproj", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeriousSam", "SeriousSam\SeriousSam.vcproj", "{7DB18ECF-BB19-4079-929E-AB0D5F543620}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WorldEditor", "WorldEditor\WorldEditor.vcproj", "{C917CEB4-1C67-4312-9F00-9B68A010B3BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -84,6 +86,10 @@ Global
 		{7DB18ECF-BB19-4079-929E-AB0D5F543620}.Debug|Win32.Build.0 = Debug|Win32
 		{7DB18ECF-BB19-4079-929E-AB0D5F543620}.Release|Win32.ActiveCfg = Release|Win32
 		{7DB18ECF-BB19-4079-929E-AB0D5F543620}.Release|Win32.Build.0 = Release|Win32
+		{C917CEB4-1C67-4312-9F00-9B68A010B3BE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C917CEB4-1C67-4312-9F00-9B68A010B3BE}.Debug|Win32.Build.0 = Debug|Win32
+		{C917CEB4-1C67-4312-9F00-9B68A010B3BE}.Release|Win32.ActiveCfg = Release|Win32
+		{C917CEB4-1C67-4312-9F00-9B68A010B3BE}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
