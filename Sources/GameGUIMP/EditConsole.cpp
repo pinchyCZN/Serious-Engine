@@ -86,7 +86,7 @@ BOOL CEditConsole::PreTranslateMessage(MSG* pMsg)
     {
       // extract string to execute
       wchar_t achrToExecute[ 1024];
-      INDEX ctLetters = GetLine( iCurrentLine, achrToExecute, 1023);
+      INDEX ctLetters = GetLine( iCurrentLine, (LPTSTR)achrToExecute, 1023);
       // set EOF delimiter
       achrToExecute[ ctLetters] = 0;
       CTString strToExecute = CStringA(achrToExecute);
