@@ -49,6 +49,7 @@
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
+				DisableSpecificWarnings="4996"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -61,6 +62,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				OutputFile="$(SolutionDir)..\bin\$(ProjectName).exe"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="1"
@@ -123,6 +125,7 @@
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="3"
+				DisableSpecificWarnings="4996"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -135,6 +138,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				OutputFile="$(SolutionDir)..\bin\$(ProjectName).exe"
 				LinkIncremental="1"
 				GenerateDebugInformation="true"
 				SubSystem="1"
@@ -192,7 +196,16 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="pushd $(SolutionDir)&#x0D;&#x0A;echo bison args=$(SolutionDir)..\Tools.Win32\bison -d -o $(Inputdir)$(InputName).c $(InputPath)&#x0D;&#x0A;$(SolutionDir)..\Tools.Win32\bison -d -o $(InputDir)$(InputName).c $(InputPath)&#x0D;&#x0A;popd&#x0D;&#x0A;copy /Y $(InputDir)$(InputName).c $(InputDir)$(InputName).cpp&#x0D;&#x0A;del /Q $(InputDir)$(InputName).c&#x0D;&#x0A;"
+						CommandLine="pushd $(ProjectDir)&#x0D;&#x0A;echo bison args=&quot;$(SolutionDir)..\Tools.Win32\bison&quot; -d -o &quot;$(Inputdir)$(InputName).c&quot; $(InputFileName)&#x0D;&#x0A;&quot;$(SolutionDir)..\Tools.Win32\bison&quot; -d -o &quot;$(Inputdir)$(InputName).c&quot; $(InputFileName)&#x0D;&#x0A;popd&#x0D;&#x0A;copy /Y &quot;$(InputDir)$(InputName).c&quot; &quot;$(InputDir)$(InputName).cpp&quot;&#x0D;&#x0A;del /Q &quot;$(InputDir)$(InputName).c&quot;&#x0D;&#x0A;"
+						Outputs="$(Inputdir)$(InputName).cpp"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="pushd $(ProjectDir)&#x0D;&#x0A;echo bison args=&quot;$(SolutionDir)..\Tools.Win32\bison&quot; -d -o &quot;$(Inputdir)$(InputName).c&quot; $(InputFileName)&#x0D;&#x0A;&quot;$(SolutionDir)..\Tools.Win32\bison&quot; -d -o &quot;$(Inputdir)$(InputName).c&quot; $(InputFileName)&#x0D;&#x0A;popd&#x0D;&#x0A;copy /Y &quot;$(InputDir)$(InputName).c&quot; &quot;$(InputDir)$(InputName).cpp&quot;&#x0D;&#x0A;del /Q &quot;$(InputDir)$(InputName).c&quot;&#x0D;&#x0A;"
 						Outputs="$(Inputdir)$(InputName).cpp"
 					/>
 				</FileConfiguration>
@@ -209,7 +222,16 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="echo scanner arg=$(SolutionDir)..\Tools.win32\flex -o$(InputDir)$(InputName).cpp $(InputPath)&#x0D;&#x0A;$(SolutionDir)..\Tools.win32\flex -o$(InputDir)$(InputName).cpp $(InputPath)&#x0D;&#x0A;"
+						CommandLine="pushd $(ProjectDir)&#x0D;&#x0A;echo scanner arg=&quot;$(SolutionDir)..\Tools.win32\flex&quot; -o&quot;$(InputName).cpp&quot; &quot;$(InputFileName)&quot;&#x0D;&#x0A;&quot;$(SolutionDir)..\Tools.win32\flex&quot; -o&quot;$(InputName).cpp&quot; &quot;$(InputFileName)&quot;&#x0D;&#x0A;popd"
+						Outputs="$(InputPath)$(InputName).cpp"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="pushd $(ProjectDir)&#x0D;&#x0A;echo scanner arg=&quot;$(SolutionDir)..\Tools.win32\flex&quot; -o&quot;$(InputName).cpp&quot; &quot;$(InputFileName)&quot;&#x0D;&#x0A;&quot;$(SolutionDir)..\Tools.win32\flex&quot; -o&quot;$(InputName).cpp&quot; &quot;$(InputFileName)&quot;&#x0D;&#x0A;popd"
 						Outputs="$(InputPath)$(InputName).cpp"
 					/>
 				</FileConfiguration>
