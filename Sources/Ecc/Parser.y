@@ -994,10 +994,11 @@ procedure_implementation
     fprintf(_fImplementation, 
       "BOOL %s::%s(const CEntityEvent &__eeInput) {\n#undef STATE_CURRENT\n#define STATE_CURRENT %s\n", 
       _strCurrentClass, strProcedureName, _strCurrentStateID);
-    fprintf(_fImplementation, 
-      "  ASSERTMSG(__eeInput.ee_slEvent==EVENTCODE_%s, \"%s::%s expects '%s' as input!\");",
-      strInputEventType, _strCurrentClass, RemoveLineDirective(strProcedureName), 
-      strInputEventType);
+    if(strncmp(strInputEventType, "EVoid", 4)!=0)
+	    fprintf(_fImplementation,
+		  "  ASSERTMSG(__eeInput.ee_slEvent==EVENTCODE_%s, \"%s::%s expects '%s' as input!\");",
+		strInputEventType, _strCurrentClass, RemoveLineDirective(strProcedureName), 
+		strInputEventType);
     fprintf(_fImplementation, "  const %s &%s = (const %s &)__eeInput;",
       strInputEventType, strInputEventName, strInputEventType);
 
