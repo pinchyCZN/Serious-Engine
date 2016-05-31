@@ -331,7 +331,7 @@ void CViewPrefs::SetDefaultValues( void)
 	// set view's defaults
 	m_bAutoRenderingRange = TRUE;
 	m_fRenderingRange = 100.0f;
-	m_PaperColor = C_WHITE;
+	m_PaperColor = C_BLACK;
 	m_SelectionColor = C_RED;
 	m_GridColor = 0xAFBDFE;
 	m_bMeasurementTape = FALSE;
@@ -1069,7 +1069,7 @@ void CWorldEditorApp::ReadFromIniFile()
 		// BUFFER 7: -polygons in white color
 		m_vpViewPrefs[ 7].m_wrpWorldRenderPrefs.SetPolygonsFillType( CWorldRenderPrefs::FT_INKCOLOR);
 		m_vpViewPrefs[ 7].m_wrpWorldRenderPrefs.SetEdgesFillType( CWorldRenderPrefs::FT_INKCOLOR);
-		m_vpViewPrefs[ 7].m_wrpWorldRenderPrefs.SetPolygonsInkColor( C_WHITE);
+		m_vpViewPrefs[ 7].m_wrpWorldRenderPrefs.SetPolygonsInkColor( C_BLACK);
 		// BUFFER 8: -polygons use texture, edges ink
 		m_vpViewPrefs[ 8].m_wrpWorldRenderPrefs.SetPolygonsFillType( CWorldRenderPrefs::FT_TEXTURE);
 		m_vpViewPrefs[ 8].m_wrpWorldRenderPrefs.SetEdgesFillType( CWorldRenderPrefs::FT_INKCOLOR);
