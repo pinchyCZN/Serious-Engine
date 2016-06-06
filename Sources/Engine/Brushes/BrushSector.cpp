@@ -812,11 +812,13 @@ void CBrushSector::SubdivideTriangles( CBrushPolygonSelection &selPolygon)
       // allocate and set vertex pointers
       bpoNew.bpo_apbvxTriangleVertices.New(3);
       // remap brush vertex pointers
-      for( INDEX iTVtx=0; iTVtx<3; iTVtx++)
-      {
-        INDEX iOldVtx = bsc_abvxVertices.Index( bpoOld.bpo_apbvxTriangleVertices[iTVtx]);
-        bpoNew.bpo_apbvxTriangleVertices[iTVtx] = &abvxVerticesNew[iOldVtx];
-      }
+	  if(bpoOld.bpo_apbvxTriangleVertices.Count()>0){
+		  for( INDEX iTVtx=0; iTVtx<3; iTVtx++)
+		  {
+			INDEX iOldVtx = bsc_abvxVertices.Index( bpoOld.bpo_apbvxTriangleVertices[iTVtx]);
+			bpoNew.bpo_apbvxTriangleVertices[iTVtx] = &abvxVerticesNew[iOldVtx];
+		  }
+	  }
 
       // copy triangle and triangle elements arrays
       bpoNew.bpo_aiTriangleElements    = bpoOld.bpo_aiTriangleElements;
