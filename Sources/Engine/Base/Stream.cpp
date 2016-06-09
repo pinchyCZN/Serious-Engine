@@ -906,7 +906,11 @@ void CTFileStream::Open_t(const CTFileName &fnFileName, CTStream::OpenMode om/*=
 
   // expand the filename to full path
   CTFileName fnmFullFileName;
-  INDEX iFile = ExpandFilePath((om == OM_READ)?EFP_READ:EFP_WRITE, fnFileName, fnmFullFileName);
+  INDEX iFile=EFP_FILE;
+  if(!(fnFileName.Length()>=3 && fnFileName[1]==':' && fnFileName[2]=='\\'))
+	iFile=ExpandFilePath((om == OM_READ)?EFP_READ:EFP_WRITE, fnFileName, fnmFullFileName);
+  else
+	  fnmFullFileName=fnFileName;
   
   // if read only mode requested
   if( om == OM_READ) {
@@ -969,7 +973,10 @@ void CTFileStream::Create_t(const CTFileName &fnFileName,
   }
 
   CTFileName fnmFullFileName;
-  INDEX iFile = ExpandFilePath(EFP_WRITE, fnFileNameAbsolute, fnmFullFileName);
+  if(!(fnFileNameAbsolute.Length()>=3 && fnFileNameAbsolute[1]==':' && fnFileNameAbsolute[2]=='\\'))
+	ExpandFilePath(EFP_WRITE, fnFileNameAbsolute, fnmFullFileName);
+  else
+	fnmFullFileName=fnFileNameAbsolute;
 
   // check parameters
   ASSERT(strlen(fnFileNameAbsolute)>0);
